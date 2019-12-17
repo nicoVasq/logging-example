@@ -1,0 +1,33 @@
+== Logging
+
+=== Log4J
+funktioniuert nicht mit quarkus +
+zur zeit nur ueber slf4j
+[source,xml]
+.pom.xml
+
+include::pom.xml[tags=log4jDependency]
+
+Setting up the log4j property file
+
+
+
+=== SLF4J
+Logging facade
+
+==== Using SLF4J in https://quarkus.io/[Quarkus]
+
+The configuring is done in the application.properties
+
+[source,properties]
+--
+include::src/main/resources/application.properties[]
+--
+
+Defining the logger in our class
+
+[source,properties]
+--
+include::src/main/java/at/htl/rest/GuitarEndpoint.java[tags=logger]
+--
+More information can be found at the https://quarkus.io/guides/logging[Quarkus Logging] site.
