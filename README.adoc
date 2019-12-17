@@ -6,7 +6,7 @@ zur zeit nur ueber slf4j
 [source,xml]
 .pom.xml
 
-include::pom.xml[tags=log4jDependency]
+include::guitars/pom.xml[tags=log4jDependency]
 
 Setting up the log4j property file
 
@@ -21,13 +21,13 @@ The configuring is done in the application.properties
 
 [source,properties]
 --
-include::src/main/resources/application.properties[]
+include::guitars/src/main/resources/application.properties[]
 --
 
 Defining the logger in our class
 
 [source,properties]
 --
-include::src/main/java/at/htl/rest/GuitarEndpoint.java[tags=logger]
+include::guitars/src/main/java/at/htl/rest/GuitarEndpoint.java[tags=logger]
 --
 More information can be found at the https://quarkus.io/guides/logging[Quarkus Logging] site.
