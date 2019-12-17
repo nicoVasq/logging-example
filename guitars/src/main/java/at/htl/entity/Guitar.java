@@ -29,6 +29,11 @@ public class Guitar {
         this.style = style;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Guitar{" +
+                "brand='" + brand + '\'' +
+                ", style='" + style + '\'' +
+                '}';
+    }
 }

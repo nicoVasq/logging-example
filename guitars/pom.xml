@@ -60,7 +60,7 @@
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-resteasy-jackson</artifactId>
     </dependency>
-</dependencies>
+  </dependencies>
   <build>
     <plugins>
       <plugin>
