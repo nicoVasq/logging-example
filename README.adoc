@@ -1,12 +1,10 @@
 == Logging
+https://nicovasq.github.io/logging-example/[Page]
 
 === Log4J
-funktioniuert nicht mit quarkus +
-zur zeit nur ueber slf4j
+
 [source,xml]
 .pom.xml
-
-include::guitars/pom.xml[tags=log4jDependency]
 
 Setting up the log4j property file
 
@@ -26,7 +24,7 @@ include::guitars/src/main/resources/application.properties[]
 
 Defining the logger in our class
 
-[source,properties]
+[source,java]
 --
 include::guitars/src/main/java/at/htl/rest/GuitarEndpoint.java[tags=logger]
 --
