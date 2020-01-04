@@ -1,7 +1,10 @@
-== Logging
-https://nicovasq.github.io/logging-example/[Page]
+= Logging
 
-=== Log4J
+https://nicovasq.github.io/logging-example/ - GitHub Pages
+
+:sourcedir: src/main/java/at/htl
+
+== Log4J
 
 [source,xml]
 .pom.xml
@@ -10,22 +13,34 @@ Setting up the log4j property file
 
 
 
-=== SLF4J
+== SLF4J
 Logging facade
 
-==== Using SLF4J in https://quarkus.io/[Quarkus]
+=== Using SLF4J in https://quarkus.io/[Quarkus]
 
+====  Setup / Config
 The configuring is done in the application.properties
 
 [source,properties]
---
+----
 include::guitars/src/main/resources/application.properties[]
---
+----
+
+==== Usage
 
 Defining the logger in our class
-
 [source,java]
---
+----
 include::guitars/src/main/java/at/htl/rest/GuitarEndpoint.java[tags=logger]
---
+----
+
+Using the logger in the `add` method
+[source,java]
+----
+include::guitars/{sourcedir}/rest/GuitarEndpoint.java[tags=usage]
+----
+<1> Entering the method log (level: debug)
+<2> Info that the save was successful
+<3> Error that the save was unsuccessful
+
 More information can be found at the https://quarkus.io/guides/logging[Quarkus Logging] site.

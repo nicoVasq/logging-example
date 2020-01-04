@@ -110,6 +110,9 @@
           <!-- OutputDir -->
           <outputDirectory>../</outputDirectory>
 
+          <!-- Syntax-Highlighter -->
+          <sourceHighlighter>coderay</sourceHighlighter>
+
           <logHandler>
             <!-- Fails the build if messages >= DEBUG are logged (from asciidoctor)-->
             <failIf>

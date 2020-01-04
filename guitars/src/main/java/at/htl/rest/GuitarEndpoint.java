@@ -25,31 +25,26 @@ public class GuitarEndpoint {
         return "Site's running!";
     }
 
-    //PUT
-    //...
-    //DELETE
-    //..
-
     @POST
     @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON) //tag::usage[]
     public Response add(Guitar guitar){
 
-        logger.debug("Entering add method");
+        logger.debug("Entering add method"); //<1>
 
         try {
             service.save(guitar);
 
-            logger.info("Save successful: " + guitar.toString());
+            logger.info("Save successful: " + guitar.toString()); //<2>
 
             return Response.ok().entity(guitar).build();
 
         } catch (Exception ex){
-            logger.error("Error while saving: " + ex.getMessage());
+            logger.error("Error while saving: " + ex.getMessage()); //<3>
 
             return Response.status(400).build();
         }
-    }
+    } //end::usage[]
 
 
 }
