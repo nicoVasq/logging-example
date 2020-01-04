@@ -13,8 +13,9 @@ import javax.ws.rs.core.Response;
 @Path("/guitar")
 public class GuitarEndpoint {
 
+    //tag::logger[]
     private static final Logger logger = LoggerFactory.getLogger(GuitarEndpoint.class);
-
+    //end::logger[]
     @Inject
     GuitarService service;
 
