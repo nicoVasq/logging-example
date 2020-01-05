@@ -1,13 +1,19 @@
 = Logging
+:toc:
 
 https://nicovasq.github.io/logging-example/ - GitHub Pages
 
-:sourcedir: src/main/java/at/htl
-
+:sourceDirGuitars: guitars/src/main/
+:sourceDirLog4j: log4j2Example/src/main/
 == Log4J
 
-[source,xml]
+To use Log4J with maven, add the Log4J api/core dependencies to your `pom.xml`
+
 .pom.xml
+[source,xml]
+----
+include::log4j2Example/pom.xml[tags=log4j]
+----
 
 Setting up the log4j property file
 
@@ -23,7 +29,7 @@ The configuring is done in the application.properties
 
 [source,properties]
 ----
-include::guitars/src/main/resources/application.properties[]
+include::{sourceDirGuitars}/resources/application.properties[]
 ----
 
 ==== Usage
@@ -31,13 +37,13 @@ include::guitars/src/main/resources/application.properties[]
 Defining the logger in our class
 [source,java]
 ----
-include::guitars/src/main/java/at/htl/rest/GuitarEndpoint.java[tags=logger]
+include::{sourceDirGuitars}/java/at/htl/rest/GuitarEndpoint.java[tags=logger]
 ----
 
 Using the logger in the `add` method
 [source,java]
 ----
-include::guitars/{sourcedir}/rest/GuitarEndpoint.java[tags=usage]
+include::{sourceDirGuitars}java/at/htl/rest/GuitarEndpoint.java[tags=usage]
 ----
 <1> Entering the method log (level: debug)
 <2> Info that the save was successful
