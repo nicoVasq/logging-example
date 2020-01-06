@@ -524,6 +524,17 @@ table.CodeRay td.code>pre{padding:0}
 <body class="article">
 <div id="header">
 <h1>Logging</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_log4j">Log4J</a></li>
+<li><a href="#_slf4j">SLF4J</a>
+<ul class="sectlevel2">
+<li><a href="#_using_slf4j_in_quarkus">Using SLF4J in Quarkus</a></li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 <div id="content">
 <div id="preamble">
@@ -536,11 +547,28 @@ table.CodeRay td.code>pre{padding:0}
 <div class="sect1">
 <h2 id="_log4j">Log4J</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>To use Log4J with maven, add the Log4J api/core dependencies to your <code>pom.xml</code></p>
+</div>
 <div class="listingblock">
 <div class="title">pom.xml</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml">Setting up the log4j property file</code></pre>
+<pre class="CodeRay highlight"><code data-lang="xml">    <span class="tag">&lt;dependencies&gt;</span>
+        <span class="tag">&lt;dependency&gt;</span>
+            <span class="tag">&lt;groupId&gt;</span>org.apache.logging.log4j<span class="tag">&lt;/groupId&gt;</span>
+            <span class="tag">&lt;artifactId&gt;</span>log4j-api<span class="tag">&lt;/artifactId&gt;</span>
+            <span class="tag">&lt;version&gt;</span>${log4j.api.version}<span class="tag">&lt;/version&gt;</span>
+        <span class="tag">&lt;/dependency&gt;</span>
+        <span class="tag">&lt;dependency&gt;</span>
+            <span class="tag">&lt;groupId&gt;</span>org.apache.logging.log4j<span class="tag">&lt;/groupId&gt;</span>
+            <span class="tag">&lt;artifactId&gt;</span>log4j-core<span class="tag">&lt;/artifactId&gt;</span>
+            <span class="tag">&lt;version&gt;</span>${log4j.core.version}<span class="tag">&lt;/version&gt;</span>
+        <span class="tag">&lt;/dependency&gt;</span>
+    <span class="tag">&lt;/dependencies&gt;</span></code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Setting up the log4j property file</p>
 </div>
 </div>
 </div>
@@ -630,7 +658,7 @@ quarkus.log.console.format=%d{HH:mm:ss} %-5p [%c{2.}] (%t) %s%e%n</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-01-04 15:42:50 +0100
+Last updated 2020-01-05 20:08:39 +0100
 </div>
 </div>
 </body>

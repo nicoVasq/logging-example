@@ -1,7 +1,6 @@
 = Logging
 :toc:
 
-https://nicovasq.github.io/logging-example/ - GitHub Pages
 
 :sourceDirGuitars: guitars/src/main/
 :sourceDirLog4j: log4j2Example/src/main/
