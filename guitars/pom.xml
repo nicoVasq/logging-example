@@ -114,7 +114,7 @@
           <sourceHighlighter>coderay</sourceHighlighter>
 
           <logHandler>
-            <!-- Fails the build if messages >= DEBUG are logged (from asciidoctor)-->
+            <!-- The build fails if messages >= DEBUG are logged (from asciidoctor)-->
             <failIf>
               <severity>DEBUG</severity>
             </failIf>
